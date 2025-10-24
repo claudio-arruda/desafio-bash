@@ -42,6 +42,6 @@ sudo journalctl -u desafiobash.service -f
 Crie um arquivo dentro da pasta /tmp/origem e verá que este arquivo será removido para pasta /tmp/destino
 
 Exemplo: touch teste.txt /tmp/origem
-         ls -la /tmp/destino (Verá o arquivo criado aqui) 
+
 
 
