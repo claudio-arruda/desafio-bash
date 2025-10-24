@@ -1,0 +1,18 @@
+[Unit]
+Description=Serviço para monitorar e mover arquivos entre diretórios
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/tmp
+ExecStart=/var/local/bin/desafiobash.sh
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
