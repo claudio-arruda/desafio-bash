@@ -52,7 +52,7 @@ sudo systemctl enable desafiobash.service
 sudo journalctl -u desafiobash.service -f
 ```
 
-## TESTE
+## Teste
 
 Crie um arquivo dentro da pasta /tmp/origem e verá que este arquivo será removido para pasta /tmp/destino
 
