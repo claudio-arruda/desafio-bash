@@ -1,6 +1,6 @@
 # Desafio3-Bash
 
-Serviço no linux que monitore um diretório e mova o arquivo instantaneamente para outro diretório quando este for armazenado neste diretório.
+Serviço no linux que monitore um diretório origem e mova o arquivo instantaneamente para outro diretório destino quando qualquer arquivo for criado no diretório origem.
 Garanta que o serviço esteja ativo de forma que suba durante o processo de inicialização do linux, caso este venha a ser reiniciado.
 
 ## Características
@@ -15,7 +15,7 @@ Ter o pacote inotify-tools instaldo no linux.
 ## Como Usar
 
 *Opção 1:*
-( Comando para criar a pasta e copiar o arquivo bash desafiobash.sh para /var/local/bin com permissões ao usuário ativo )
+( Crie a pasta e copie o arquivo bash desafiobash.sh para /var/local/bin com suas devidas permissões ao usuário ativo )
 
 ```bash
 sudo mkdir -p /var/local/bin
@@ -26,14 +26,14 @@ sudo cp ./desafiobash.sh /var/local/bin && sudo chmod 744 /var/local/bin/desafio
 ```
 
 *Opção 2:*
-( Copiar arquivo bash para o diretório system )
+( Copie arquivo bash para o diretório system )
 
 ```bash
 sudo cp desafiobash.service /etc/systemd/system
 ```
 
 *Opção 3:*
-( Iniciar o serviço )
+( Inicie o serviço )
 
 ```bash
 sudo systemctl start desafiobash.service
@@ -56,7 +56,10 @@ sudo journalctl -u desafiobash.service -f
 
 Crie um arquivo dentro da pasta /tmp/origem e verá que este arquivo será removido para pasta /tmp/destino
 
-Exemplo: touch teste.txt /tmp/origem
+*Exemplo:*
 
+```bash
+touch teste.txt /tmp/origem
+```
 
 
